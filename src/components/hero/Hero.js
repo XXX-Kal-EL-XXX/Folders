@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
   const { ref, inView } = useInView({
-    threshold: 0.4, // Adjust the threshold as needed
+    threshold: 0.4, 
   });
   return (
     <div className={inView ? 'hero hero--zoom' : 'hero'} ref={ref}>
@@ -16,13 +16,11 @@ const Hero = () => {
           <Button
             icon='login'
             text='Log In'
-            style='outline'
             size='large'
           />
           <Button
             icon='product'
             text='Product'
-            style='primary'
             size='large'
           />
         </div>
