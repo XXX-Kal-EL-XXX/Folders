@@ -1,33 +1,34 @@
-import React from 'react'
-
-import './Hero.css'
-import { Button } from '../button/Button'
+import React from 'react';
+import './Hero.css';
+import Button from '../button/Button';
+import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
-    return (
-        <div className='hero'>
-            <div className='content'>
-                <h1>Folders World</h1>
-                <p className='search-text'> What are you waiting for? </p>
-                <div className='hero-btns'>
-                    <Button
-                        className='btns'
-                        buttonStyle='btn--outline'
-                        buttonSize='btn--large'
-                    >
-                        GET STARTED
-                    </Button>
-                    <Button
-                        className='btns'
-                        buttonStyle='btn--primary'
-                        buttonSize='btn--large'
-                    >
-                        WATCH TRAILER
-                    </Button>
-                </div>
-            </div>
+  const { ref, inView } = useInView({
+    threshold: 0.4, // Adjust the threshold as needed
+  });
+  return (
+    <div className={inView ? 'hero hero--zoom' : 'hero'} ref={ref}>
+      <div className='content'>
+        <h1><span className='clr'>Folders </span><span>World</span></h1>
+        <p className='search-text'>What are you waiting for?</p>
+        <div className='hero-btns'>
+          <Button
+            icon='login'
+            text='Log In'
+            style='outline'
+            size='large'
+          />
+          <Button
+            icon='product'
+            text='Product'
+            style='primary'
+            size='large'
+          />
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
-export default Hero
+export default Hero;

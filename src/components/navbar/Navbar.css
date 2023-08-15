@@ -19,7 +19,7 @@
 }
 
 .navbar.active .navbar__link:hover {
-    border-color: #020202;
+    border-color: #f26a2e;
     transition: 250ms;
 }
 
@@ -47,12 +47,8 @@
     color: #fff;
 }
 
-/* .navbar span {
-    color: #5651e5;
-} */
-
 .change1 {
-    color: #5651e5;
+    color: #f26a2e;
 }
 
 .change2 {
@@ -71,7 +67,7 @@
 }
   
 .navbar__link:hover {
-    border-color: white;
+    border-color: #f26a2e;
     transition: 250ms;
   }
 

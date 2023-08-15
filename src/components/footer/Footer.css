@@ -15,7 +15,9 @@
 }
 
 .footer h3 {
-    margin: .8rem 0
+    margin: .8rem 0;
+    color: #f26a2e;
+    
 }
 
 .footer p {
@@ -29,7 +31,7 @@
 .footer .icon {
     font-size: 2rem;
     margin: 2rem 3rem;
-    color: #5651e5;
+    color: #f26a2e;
 }
 
 
@@ -37,7 +39,7 @@
     text-align: center;
     margin-top: 2rem;
     font-size: 1.2rem;
-    color: #5651e5;
+    color: #f26a2e;
     font-family: "Lobster";
     
   }

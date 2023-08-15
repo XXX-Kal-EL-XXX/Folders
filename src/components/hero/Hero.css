@@ -1,14 +1,27 @@
 .hero {
     color: #fff;
-    height: 80vh;
+    height: 100vh;
     width: 100%;
     position: relative;
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333; 
+    transform: scale(100%);
+    opacity: 0;
+    transition: transform 2s, opacity 2s;
+}
+
+.hero--zoom {
+    transform: scale(100%);
+    opacity: 1;
+    transition: transform 2s, opacity 2s;
 }
 
 .hero:before {
     content: '';
-    background: url('../../assets/homes.png') no-repeat center center/cover;
+    /* background: url('../../assets/homes.png') no-repeat center center/cover; */
     background-size: cover; 
     height: 100%;
     width: 100%;
@@ -23,31 +36,35 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     text-align: center;
     max-width: 700px;
     margin: auto;
     padding: 1rem;
 }
-
-.hero-btns {
-    margin-top: 0px;
-  }
-  
-  .hero-btns .btn {
-    margin: 6px;
-  }
   
 .hero h1 {
     font-size: 3.5rem;
     text-transform: capitalize;
     font-family: "Lobster";
+    margin-bottom: 1rem;
 }
 
 .hero .search-text {
     margin: 0.5rem;
     font-size: 1.8rem;
     font-family: "Lobster", cursive;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.clr{
+    color: #f26a2e;;
 }
 
 
